@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://getadmissionsforfuture.github.io/Student-guidance-website/sitemap.xml
