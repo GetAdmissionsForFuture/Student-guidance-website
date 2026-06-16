@@ -1184,14 +1184,16 @@ preload.src = image;
 document.getElementById("uniName").innerText = title;
 document.getElementById("uniInfo").innerHTML = info.replace(/\n/g, "<br>");
 document.querySelector(".modal-content").scrollTop = 0;
-  const img = document.getElementById("uniImage");
-img.src = image;
+const img = document.getElementById("uniImage");
 
 img.onload = function() {
 document.getElementById("uniModal").style.display = "block";
-
 };
-
+img.onerror = function() {
+  alert("image not found:  "+image );
+};
+img.src = image;
+}
 function closeModal(){
   document.querySelector(".modal-content").scrollTop = 0;
   document.getElementById("uniModal").style.display = "none";
