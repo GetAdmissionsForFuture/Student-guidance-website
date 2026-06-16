@@ -550,7 +550,14 @@ section { padding: 80px 6%; }
 .c-item span { font-size:11px; color:#6b7faa; text-transform:uppercase; letter-spacing:1px; display:block; }
 .c-item a, .c-item p { color:white; font-size:14px; font-weight:600; text-decoration:none; margin:0; }
 .c-item a:hover { color:var(--orange); }
-.c-form h3 { font-family:'Montserrat',sans-serif; font-size:20px; font-weight:700; color:var(--orange); margin-bottom:20px; }
+.c-form h3 {
+  font-family:'Montserrat',sans-serif;
+  font-size:32px;
+  font-weight:800;
+  color:var(--orange);
+  margin-bottom:25px;
+  text-align:center;
+}
 .frow { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:14px; }
 .c-form input, .c-form select, .c-form textarea {
   width:100%; padding:13px 15px;
@@ -747,12 +754,18 @@ footer strong { color:var(--orange); }
 }
  
   .c-form{
-    margin-top: 60px;
+    margin-top:20px;
 }
  
   .c-icon i{
     font-size:24px;
     color:white;
+}
+  .form-subtitle{
+    text-align:center;
+    color:#8ca0c8;
+    margin-bottom:25px;
+    font-size:15px;
 }
 </style>
 </head>
@@ -1037,7 +1050,8 @@ footer strong { color:var(--orange); }
 </div>
     </div>
     <div class="c-form rev-r" id="apply">
-      <h3>Apply Now — Free Counseling</h3>
+   <h3>🎓 Apply Now</h3>
+<p class="form-subtitle">Get Free Counseling & Admission Guidance</p>
 
 <div class="frow">
   <input type="text" id="name" placeholder="Your Full Name" required>
