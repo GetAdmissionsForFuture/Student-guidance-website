@@ -10,6 +10,7 @@
 <meta name="keywords" content="admissions, universities, internships, scholarships, student guidance, career counseling">
 <meta name="robots" content="index, follow">
 <link href="https://fonts.googleapis.com/..." rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -744,21 +745,16 @@ footer strong { color:var(--orange); }
   #apply{
     scroll-margin-top: 100px;
 }
-  #apply{
-    scroll-margin-top: 100px;
-}
+ 
   .c-form{
     margin-top: 60px;
 }
-  #apply{
-    scroll-margin-top: 100px;
-}
+ 
   .c-icon i{
     font-size:24px;
     color:white;
 }
 </style>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
 
@@ -771,12 +767,12 @@ footer strong { color:var(--orange); }
   ☰
 </div>
   <div class="nav-links">
-    <a href="#home">Home</a>
-    <a href="#universities">Universities</a>
-    <a href="#internships">Internships</a>
-    <a href="#why">Why Us</a>
-     <a href="#contact">Contact</a>
-    <a href="#apply" class="cta">🎓 Apply Now</a>
+<a href="#home">Home</a>
+<a href="#universities">Universities</a>
+<a href="#internships">Internships</a>
+<a href="#why">Why Us</a>
+<a href="#contact">Contact</a>
+<a href="#apply" class="cta">🎓 Apply Now</a>
   </div>
 </nav>
 
@@ -1005,8 +1001,8 @@ footer strong { color:var(--orange); }
       <div class="c-item"><div class="c-icon">📧</div><div><span>Email</span><a href="mailto:getadmissionsforfuture@zohomail.in">getadmissionsforfuture@zohomail.in</a></div></div>
       <div class="c-item"><div class="c-icon">📍</div><div><span>Location</span><p>Hyderabad, Telangana, India</p></div></div>
    <div class="c-item">
-   <div class="c-icon">
-    <i class="fab fa-instagram"></i>
+  <div class="c-icon">
+  <i class="fab fa-instagram"></i>
 </div>
     <div>
         <span>Instagram</span>
@@ -1169,13 +1165,19 @@ title = "M.S. Ramaiah Institute of Technology";
 image = "images/msrit.jpg";
 info = "<b>🏆 University Overview</b>\n\nEstablished: 1962\nLocation: Bengaluru, Karnataka.\nOne of Karnataka's oldest engineering colleges.\n\n<b>🎓 Popular Courses</b>\n\nComputer Science\nInformation Science\nAI & ML\nECE\nMechanical Engineering\n\n<b>💼 Placements</b>\n\nPlacement Rate: 90%+\nHighest Package: ₹50+ LPA\nAverage Package: ₹7-10 LPA\n\n<b>🏢 Top Recruiters</b>\n\nMicrosoft\nAmazon\nOracle\nCisco\nDell\nInfosys\n\n<b>⭐ Why Choose MSRIT?</b>\n\nStrong engineering reputation.\nExcellent industry network.\nConsistent placements.\nBengaluru tech ecosystem.";
 }
-document.getElementById("uniImage").src = image;
+const preload = new Image();
+preload.src = image; 
+
 document.getElementById("uniName").innerText = title;
 document.getElementById("uniInfo").innerHTML = info.replace(/\n/g, "<br>");
 document.querySelector(".modal-content").scrollTop = 0;
+  const img = document.getElementById("uniImage");
+img.src = image;
+
+img.onload = function() {
 document.getElementById("uniModal").style.display = "block";
 
-}
+};
 
 function closeModal(){
   document.querySelector(".modal-content").scrollTop = 0;
@@ -1270,6 +1272,20 @@ function sendMail() {
         alert("Failed to send application. Please try again.");
     });
 }
+
+  const preloadImages = [
+  "images/vit.jpg",
+  "images/srm.jpg",
+  "images/amrita.jpg",
+  "images/shiv.jpg",
+  "images/msrit.jpg"
+];
+
+preloadImages.forEach(src => {
+  const img = new Image();
+  img.src = src;
+});
 </script>
+ 
 </body>
 </html>
