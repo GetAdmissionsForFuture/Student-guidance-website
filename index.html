@@ -769,6 +769,7 @@ footer strong { color:var(--orange); }
     margin-bottom:25px;
     font-size:15px;
 }
+
 </style>
 </head>
 <body>
@@ -785,6 +786,7 @@ footer strong { color:var(--orange); }
 <a href="#home">Home</a>
 <a href="#universities">Universities</a>
 <a href="#internships">Internships</a>
+<a href="blog/blog.html">Blog</a>
 <a href="#why">Why Us</a>
 <a href="#contact">Contact</a>
 <a href="#apply" class="cta">🎓 Apply Now</a>
@@ -1241,7 +1243,9 @@ history.scrollRestoration = "manual";
 
 window.onload = function() {
     setTimeout(function() {
-        window.scrollTo(0, 0);
+        if (!window.location.hash) {
+            window.scrollTo(0, 0);
+        }
     }, 100);
 };
 </script>
@@ -1306,4 +1310,5 @@ preloadImages.forEach(src => {
 </script>
  
 </body>
+
 </html>
